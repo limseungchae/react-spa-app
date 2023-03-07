@@ -1,14 +1,15 @@
-import {Link} from "react-router-dom";
-import React from "react";
-
-const Menu = () => {
+import {Route, Routes} from "react-router";
+import Home from "../pages/Home";
+import Stuff from "../pages/Stuff";
+import Contact from "../pages/Contact";
+import NoPath from "../pages/NoPath";
+import {Link, NavLink} from "react-router-dom";
+const Menu =() => {
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/events">Events</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/contact">Contact</Link>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/stuff">Stuff</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
         </nav>
     );
 }

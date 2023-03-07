@@ -5,6 +5,8 @@ import Stuff from "./pages/Stuff";
 import Contact from "./pages/Contact";
 import {NavLink} from "react-router-dom";
 import NoPath from "./pages/NoPath";
+import Content from "./components/Content";
+import Menu from "./components/Menu";
 
 // localhost:3000           -> Home
 // localhost:3000/stuff     -> Stuff
@@ -19,14 +21,8 @@ function App() {
           <li><NavLink to="/stuff">Stuff</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
-      <div className="content">
-          <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/stuff' element={<Stuff />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='*' element={<NoPath />}/>
-          </Routes>
-      </div>
+        <Menu />
+        <Content />
     </div>
   );
 }
